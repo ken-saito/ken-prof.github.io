@@ -1,0 +1,96 @@
+/*=======================================================
+====================ハンバーガーメニュー====================
+=======================================================*/
+#nav-open span i{
+    float: right;
+    cursor: pointer;
+    border: 1px solid #666666;
+    padding: 10px;
+}
+
+/*文字を非表示*/
+#nav-contents{
+    display: none;
+}
+
+/*チェックボックスを非表示*/
+.nav-invisible{
+    display: none;
+}
+
+/*レスポンシブ時のスマホ用ヘッダー*/
+#nav-contents{
+  position: absolute;
+  top: 100px;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  background: black;
+  transition: .3s;
+  opacity: 0;
+}
+
+#nav-input:checked ~ #nav-contents{
+  opacity: 0.8;
+  display: block;/*レスポンシブ時にメニューを表示*/
+
+}
+
+/*pc表示ではハンバーガーメニューを非表示にする*/
+.sp-menu{
+    display: none;
+}
+/*=======================================================
+====================スマホ画面CSS=========================
+=======================================================*/
+@media(max-width:800px){
+/*==================
+      全体設定
+==================*/
+
+/*スマホ表示でハンバーガーメニューを表示する*/
+  .sp-menu{
+    display: block;
+  }
+
+/*スマホ表示でヘッダーメニューを非表示にする*/
+  .header nav{
+    display: none;
+  }
+
+  .container{
+    width: auto;
+  }
+  .main section{
+    margin: 0px;
+}
+
+/*==============================
+              header
+==============================*/
+  #h-title{
+    font-size: 20px;
+  }
+  .main-title{
+    font-size: 30px;
+  }
+/*==============================
+              About
+==============================*/
+  .about-box{
+    display: block;
+  }
+  .face-img{
+    display: none;
+}
+/*==============================
+              Service
+==============================*/
+  .service-box ul{
+    display: block;
+  }
+  .service-box ul li{
+    width: 100%;
+  }
+
+}

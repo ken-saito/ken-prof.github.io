@@ -27,183 +27,227 @@
 </head>
 
 <body>
-    <!-- ========================================
+    <div class="container">
+        <!-- ========================================
     ヘッダー
 ========================================= -->
-    <div class="header">
-        <h1 id="h-title">KEN's Portofolio Website</h1>
-        <nav>
-            <ul>
-                <li class="h-li">
-                    <a href="#About">
-                        <i class="h-fontawesome far fa-address-card fa-2x fa-fw"></i>
-                        About
-                    </a>
-                </li>
-                <li class="h-li">
-                    <a href="#Service">
-                        <i class="h-fontawesome fas fa-laptop-code fa-2x fa-fw"></i>
-                        Service
-                    </a>
-                </li>
-                <li class="h-li">
-                    <a href="#Works">
-                        <i class="h-fontawesome fas fa-photo-video fa-2x fa-fw"></i>
-                        Works
-                    </a>
-                </li>
-                <li class="h-li">
-                    <a href="#Contact">
-                        <i class="h-fontawesome far fa-envelope fa-2x fa-fw"></i>
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="main-box">
-        <img class="main-img" src="images/CIMG0352.jpeg" alt="メイン画像">
-        <p class="main-title">
+        <div class="header">
+            <h1 id="h-title">KEN's Portofolio Website</h1>
+            <!-- ========================================
+            スマホ画面
+        ========================================= -->
+            <div class="sp-menu">
+                <!--チェックが入った時にナビゲーションメニューを表示する-->
+                <input type="checkbox" id="nav-input" class="nav-invisible">
+                <label id="nav-open" for="nav-input"><span><i class="fas fa-bars"></i></span></label>
+                <div id="nav-contents">
+                    <nav>
+                        <ul>
+                            <li class="sp-menu-list">
+                                <a href="#About">
+                                    <div class="sp-menu">
+                                        About
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sp-menu-list">
+                                <a href="#Service">
+                                    <div class="sp-menu">
+                                        Service
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sp-menu-list">
+                                <a href="#Works">
+                                    <div class="sp-menu">
+                                        Works
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sp-menu-list">
+                                <a href="#Contact">
+                                    <div class="sp-menu">
+                                        Contact
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="h-li">
+                        <a href="#About">
+                            <i class="h-fontawesome far fa-address-card fa-2x fa-fw"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="h-li">
+                        <a href="#Service">
+                            <i class="h-fontawesome fas fa-laptop-code fa-2x fa-fw"></i>
+                            Service
+                        </a>
+                    </li>
+                    <li class="h-li">
+                        <a href="#Works">
+                            <i class="h-fontawesome fas fa-photo-video fa-2x fa-fw"></i>
+                            Works
+                        </a>
+                    </li>
+                    <li class="h-li">
+                        <a href="#Contact">
+                            <i class="h-fontawesome far fa-envelope fa-2x fa-fw"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-box">
+            <img class="main-img" src="images/CIMG0352.jpeg" alt="メイン画像">
+            <p class="main-title">
             Welcome To
             <br>Portofolio
             <br>Website
         </p>
-    </div>
-    <div class="main">
-        <!-- ========================================
+        </div>
+        <div class="main">
+            <!-- ========================================
     About
 ========================================= -->
-        <div class="container-gray">
-            <section class="section-gray">
-                <h2 id="About">About</h2>
-                <div class="about-box">
-                    <div class="face-box">
-                        <img class="face-img" src="images/image0.jpeg" alt="自分の写真">
-                        <p class="face-name">KEN</p>
-                    </div>
-                    <div class="about-skill-box">
-                        <h3>Profile</h3>
-                        <p>
+            <div class="container-gray">
+                <section class="section-gray">
+                    <h2 id="About">About</h2>
+                    <div class="about-box">
+                        <div class="face-box">
+                            <img class="face-img" src="images/image0.jpeg" alt="自分の写真">
+                            <p class="face-name">KEN</p>
+                        </div>
+                        <div class="about-skill-box">
+                            <h3>Profile</h3>
+                            <p>
                         ・ProgateでHTML & CSSを学習中(スキルレベルは<a href="#Works">Works</a>をご覧ください)
                         </p>
-                        <h3>Skill</h3>
-                        <div class="skill-icon">
-                            <div class="s-html5">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <p>HTML5</p>
-                            </div>
-                            <div class="s-css3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <p>CSS3</p>
-                            </div>
-                            <div class="s-css3">
-                                <i class="fas fa-mobile-alt fa-3x"></i>
-                                <p>responsive</p>
+                            <h3>Skill</h3>
+                            <div class="skill-icon">
+                                <div class="s-html5">
+                                    <i class="fab fa-html5 fa-3x"></i>
+                                    <p>HTML5</p>
+                                </div>
+                                <div class="s-css3">
+                                    <i class="fab fa-css3-alt fa-3x"></i>
+                                    <p>CSS3</p>
+                                </div>
+                                <div class="s-css3">
+                                    <i class="fas fa-mobile-alt fa-3x"></i>
+                                    <p>responsive</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
-        <!-- ========================================
+                </section>
+            </div>
+            <!-- ========================================
     背景を斜めに分割
 ========================================= -->
-        <div class="section1">
-        </div>
-        <div class="section2">
-        </div>
-        <!-- ========================================
+            <div class="section1">
+            </div>
+            <div class="section2">
+            </div>
+            <!-- ========================================
     Service
 ========================================= -->
-        <div class="container-white">
-            <section>
-                <h2 id="Service">Service</h2>
-                <div class="service-box">
-                    <ul>
-                        <li>
-                            <h4>コーディング</h4>
-                            <i class="fas fa-laptop-code fa-10x"></i>
-                            <p>デザイン案をベースにWebサイトのコーディング(HTML,CSS)を行います。ご希望のデザインを忠実に再現致します。</p>
-                        </li>
-                        <li>
-                            <h4>レスポンシブ対応</h4>
-                            <i class="fas fa-mobile-alt fa-10x"></i>
-                            <p>閲覧するデバイス(タブレット、スマホ等)に応じて、見やすくかつ操作しやすいWebサイトをお作りいたします。
+            <div class="container-white">
+                <section>
+                    <h2 id="Service">Service</h2>
+                    <div class="service-box">
+                        <ul>
+                            <li>
+                                <h4>コーディング</h4>
+                                <i class="fas fa-laptop-code fa-6x"></i>
+                                <p>デザイン案をベースにWebサイトのコーディング(HTML,CSS)を行います。ご希望のデザインを忠実に再現致します。</p>
+                            </li>
+                            <li>
+                                <h4>レスポンシブ対応</h4>
+                                <i class="fas fa-mobile-alt fa-6x"></i>
+                                <p>閲覧するデバイス(タブレット、スマホ等)に応じて、見やすくかつ操作しやすいWebサイトをお作りいたします。
                                 お客様のご要望に合わせて対応いたしますので、お申し付け下さい。</p>
-                        </li>
-                        <li>
-                            <h4>メンテナンス</h4>
-                            <i class="fas fa-tools fa-10x"></i>
-                            <p>Webサイト制作後の保守・管理の修正や更新など、ご要望に応じてサポートいたします。</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-        <!-- ========================================
+                            </li>
+                            <li>
+                                <h4>メンテナンス</h4>
+                                <i class="fas fa-tools fa-6x"></i>
+                                <p>Webサイト制作後の保守・管理の修正や更新など、ご要望に応じてサポートいたします。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- ========================================
     背景を斜めに分割
 ========================================= -->
-        <div class="section4">
-        </div>
-        <div class="section3">
-        </div>
-        <!-- ========================================
+            <div class="section4">
+            </div>
+            <div class="section3">
+            </div>
+            <!-- ========================================
     Works
 ========================================= -->
-        <div class="container-gray">
-            <section class="section-gray">
-                <h2 id="Works">Works</h2>
-                <div class="works-box">
-                    <ul>
-                        <li>
-                            <a href="TEST1/index.html">
-                                <h4>架空サイトのコーディング1</h4>
-                                <img class="portfolio-img" src="images/スクリーンショット 2020-08-17 17.12.20.png" alt="TEST1/index.html">
-                                <p>・4つのページにより構成されたサンプルサイト<br>
+            <div class="container-gray">
+                <section class="section-gray">
+                    <h2 id="Works">Works</h2>
+                    <div class="works-box">
+                        <ul>
+                            <li>
+                                <a href="TEST1/index.html">
+                                    <h4>架空サイトのコーディング1</h4>
+                                    <img class="portfolio-img" src="images/スクリーンショット 2020-08-17 17.12.20.png" alt="TEST1/index.html">
+                                    <p>・4つのページにより構成されたサンプルサイト<br>
                                     ・HTML,CSSによりコーディング
                                 </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="TEST2/index.html">
-                                <h4>架空サイトのコーディング2</h4>
-                                <img class="portfolio-img" src="images/スクリーンショット 2020-08-17 17.14.48.png" alt="">
-                                <p>・6つのページにより構成されたサンプルサイト<br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="TEST2/index.html">
+                                    <h4>架空サイトのコーディング2</h4>
+                                    <img class="portfolio-img" src="images/スクリーンショット 2020-08-17 17.14.48.png" alt="">
+                                    <p>・6つのページにより構成されたサンプルサイト<br>
                                     ・HTML,CSSによりコーディング<br>
                                     ・レスポンシブ対応
                                 </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-        <!-- ========================================
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- ========================================
     背景を斜めに分割
 ========================================= -->
-        <div class="section1">
-        </div>
-        <div class="section2">
-        </div>
-        <!-- ========================================
+            <div class="section1">
+            </div>
+            <div class="section2">
+            </div>
+            <!-- ========================================
     Contact
 ========================================= -->
-        <div class="container-white">
-            <section class="section">
-                <h2 id="Contact">Contact</h2>
-                <p class="contact-p">お問い合わせは
+            <div class="container-white">
+                <section class="section">
+                    <h2 id="Contact">Contact</h2>
+                    <p class="contact-p">お問い合わせは
                     <a href="https://twitter.com/home?lang=ja">twitter</a>
                     からよろしくお願します。
                 </p>
-            </section>
-        </div>
-        <div class="footer">
+                </section>
+            </div>
+            <div class="footer">
 
-        </div>
-        <!-- ========================================
+            </div>
+            <!-- ========================================
     jQuery
 ========================================= -->
-        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+            <script src="script.js" type="text/javascript" charset="utf-8"></script>
+        </div>
 </body>
 
 </html>
