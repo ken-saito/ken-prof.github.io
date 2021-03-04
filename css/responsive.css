@@ -2,20 +2,20 @@
 ====================ハンバーガーメニュー====================
 =======================================================*/
 #nav-open span i{
-    float: right;
-    cursor: pointer;
-    border: 1px solid #666666;
-    padding: 10px;
+  float: right;
+  cursor: pointer;
+  border: 1px solid #666666;
+  padding: 10px;
 }
 
 /*文字を非表示*/
 #nav-contents{
-    display: none;
+  display: none;
 }
 
 /*チェックボックスを非表示*/
 .nav-invisible{
-    display: none;
+  display: none;
 }
 
 /*レスポンシブ時のスマホ用ヘッダー*/
@@ -30,10 +30,28 @@
   opacity: 0;
 }
 
+/*ハンバーガーメニューがクリックされた時にメニューを表示する(間接セレクタ)*/
 #nav-input:checked ~ #nav-contents{
   opacity: 0.8;
   display: block;/*レスポンシブ時にメニューを表示*/
+}
 
+
+.sp-nav ul{
+  padding: 0;
+  margin: 0;
+}
+
+.sp-menu-list{
+  border-bottom: 1px solid white;
+  text-align: left;
+  line-height: 2.0;
+  padding: 16px;
+}
+
+.sp-menu-list a{
+  color: white;
+  text-decoration: none;
 }
 
 /*pc表示ではハンバーガーメニューを非表示にする*/
@@ -43,7 +61,7 @@
 /*=======================================================
 ====================スマホ画面CSS=========================
 =======================================================*/
-@media(max-width:800px){
+@media screen and (max-width:700px){
 /*==================
       全体設定
 ==================*/
@@ -51,10 +69,11 @@
 /*スマホ表示でハンバーガーメニューを表示する*/
   .sp-menu{
     display: block;
+    margin: 2rem;
   }
 
 /*スマホ表示でヘッダーメニューを非表示にする*/
-  .header nav{
+  .header-nav{
     display: none;
   }
 
@@ -63,16 +82,18 @@
   }
   .main section{
     margin: 0px;
-}
+  }
 
 /*==============================
               header
 ==============================*/
   #h-title{
-    font-size: 20px;
+    font-size: 18px;
   }
   .main-title{
-    font-size: 30px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin-top: 50px;
   }
 /*==============================
               About
@@ -82,15 +103,31 @@
   }
   .face-img{
     display: none;
-}
+  }
 /*==============================
               Service
 ==============================*/
   .service-box ul{
     display: block;
+    padding: 0px;
+    margin: 0px;
   }
   .service-box ul li{
     width: 100%;
+    margin: 20px 0;
+    padding: 5px;
   }
-
+/*==============================
+              Works
+==============================*/
+  .works-box ul{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+  .works-box ul li{
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px;
+  }
 }

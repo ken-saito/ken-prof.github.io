@@ -99,7 +99,7 @@ section{
     container
 ========================================= */
 .container{
-    max-width: 1600px;
+    max-width: 100%;
 }
 
 /* ========================================
@@ -123,24 +123,24 @@ section{
     font-size: 35px;
 }
 
-.header nav{
+.header-nav{
     margin-left: 250px;
     margin-top: 30px;
 }
 
-.header nav ul{
+.header-nav ul{
     display: flex;
 }
 
-.header nav ul li{
+.header-nav ul li{
     margin-right: 25px;
 }
 
-.header nav ul li a{
+.header-nav ul li a{
     color: #fff;
 }
 
-.header nav ul li:hover{
+.header-nav ul li:hover{
     border-bottom: 2px solid white;
     padding-bottom: 6px;
 }
