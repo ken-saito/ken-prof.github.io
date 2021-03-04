@@ -1,0 +1,148 @@
+/*ハンバーガー メニューの擬似要素
+#nav-open span,#nav-open span::before,#nav-open span::after{
+    position: absolute;
+    height: 3px;線の太さ
+    width: 30px;線の長さ
+    background: #666666;線の色
+    content: "";文字は追加しない
+    cursor: pointer;
+}
+
+ハンバーガー メニューの擬似要素(上の線)
+#nav-open span{
+    top: 38px;
+    right: 30px;
+}
+
+ハンバーガー メニューの擬似要素(真ん中の線)
+#nav-open span::before{
+    bottom: -12px;
+}
+ハンバーガー メニューの擬似要素(下の線)
+#nav-open span::after{
+    bottom: -24px;
+}
+*/
+
+#nav-open span i{
+    float: right;
+    cursor: pointer;
+    border: 1px solid #666666;
+    padding: 10px;
+}
+
+/*文字を非表示*/
+#nav-contents{
+    display: none;
+}
+
+/*チェックボックスを非表示*/
+.nav-invisible{
+    display: none;
+}
+
+/*レスポンシブ時のスマホ用ヘッダー*/
+#nav-contents{
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background: black;
+    transition: .3s;
+    opacity: 0;
+}
+
+#nav-input:checked ~ #nav-contents{
+    opacity: 0.8;
+    display: block;/*レスポンシブ時にメニューを表示*/
+}
+
+    .sp-menu-list{
+        border-bottom: 1px solid white;
+        text-align: left;
+        line-height: 2.0;
+        padding: 16px;
+    }
+
+    .sp-menu-list a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .sp-menu-top{
+        font-size: 18px;
+    }
+
+    .sp-menu-bottom{
+        font-size: 11px;
+    }
+
+.sp-menu{
+    display: none;
+}
+
+/*スマホ画面用レスポンシブ*/
+@media screen and (max-width:670px){
+
+    .sp-menu{
+        display: block;/*レスポンシブ時にメニューを表示*/
+    }
+
+    .body{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .main{
+        float: none;
+        width: auto;
+    }
+
+    .side{
+        float: none;
+        width: auto;
+    }
+
+    .container{
+        width: 98%;
+    }
+
+    .contents{
+        padding: 2%;
+    }
+
+    .h-title .h-logo{
+        width: 60%;
+    }
+
+    .m-h2 .m-h3{
+        font-size: 16px;
+        padding: 7px 6px 7px 8px;
+    }
+
+    .m-h2::first-letter{
+        padding-left: 8px;
+    }
+
+    .m-info-date{
+        font-size: 8px;
+    }
+    .m-info-description{
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .m-info-new{
+        font-size: 8px;
+        padding: 1px 2px;
+    }
+
+    .m-log a{
+        font-size: 12px;
+    }
+    /*スマホ画面の時にヘッダー非表示*/
+    .h-nav{
+        display: none;
+    }
+}

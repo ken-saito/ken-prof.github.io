@@ -1,0 +1,423 @@
+body{
+    background-color: #d2d2d2;
+    color: #666666;
+}
+
+.container{
+    max-width: 1200px;/*レスポンシブ対応のためwidth→max-widthに変更*/
+    margin: 0 auto;
+    background-color: white;
+}
+
+/*header--------------------------------------------------------------------------------------------------------------------------------*/
+.header{
+    background-color:#fff;
+    border-top: 5px solid blue;
+}
+
+.h-title{
+    position: relative;
+    height: 100px;/*子要素にposition: absolute;を指示すると親要素のheightが０になってしまうため高さを指定する必要がある*/
+}
+
+.h-logo{
+    width: 300px;
+    position: absolute;
+    top: 50%;/*親要素(.h-title)の上からの50%下げた位置に移動させる*/
+    left: 4%;/*親要素(.h-title)の左からの4%下げた位置に移動させる*/
+    transform: translateY(-50%);/*子要素(.h-logo)の高さの50%上げた位置に移動する*/
+}
+
+.h-nav{
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.h-ul{
+    letter-spacing: -0.4em;/*htmlにてli要素同士の改行により要素間に隙間ができてしまう。liの親要素(.h-ul)に対して字の幅を狭くする指定をする。*/
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+
+要素を横並びにし、尚且つ要素の幅を均一にしたい場合は下記の通りFlexboxをしようすると楽である。
+display:inline-block;を指定すると様々な調整を必要とする。
+
+.h-ul{
+    dixplay:flex;←を指定する事により子要素の.h-liを横並びにする事できる。
+}
+
+.h-li{
+    flex:auto;←を指定する事により.h-liの横幅を均一にできる。
+}
+
+-----------------------------------------------------------------------------------------------------------------------------*/
+
+.h-li{
+    display: inline-block;/*ブロックの要素を持ちつつリストを横並びにできる*/
+    width: calc(100%/6);/*.h-liの幅を6等分にする*/
+    letter-spacing: normal;/*親要素(.h-ul)に字の幅を狭くする指示をしたため、子要素にて字の幅を広くする指示を行う。*/
+    border-right: 1px solid #d2d2d2;
+    box-sizing: border-box;/*要素のサイズをborderを含んだサイズに指定*/
+    height: 64px;/*子要素にposition: absolute;を指示すると親要素のheightが０になってしまうため高さを指定する必要がある*/
+    position: relative;
+    vertical-align: bottom;/*縦方向の位置揃え(リスト下部の余白をなくす)*/
+
+}
+
+.h-li-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;/*親要素(.h-title)の上からの50%下げた位置に移動させる*/
+    left: 50%;/*親要素(.h-title)の左からの50%下げた位置に移動させる*/
+    transform: translate(-50%,-50%);/*子要素(.h-logo)の高さ,幅に対して50%ずらした位置に移動する*/
+    text-align: center;
+}
+
+.h-li-top{
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.h-li-bottom{
+    color: #bababa;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.h-li:hover{
+    background-color: #E6EBFA;
+}
+
+.h-li:hover .h-li-top{
+    color: blue;
+}
+
+.h-li:hover .h-li-box::before{/*擬似要素*/
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    left: 4px;
+    background-color: blue;
+}
+/*上記の擬似要素をborder-leftで指示するとborderの幅分、.h-li-boxが右にずれる*/
+
+.active{
+    background-color: #E6EBFA;
+}
+
+.active .h-li-top{
+    color: blue;
+}
+
+.active .h-li-box::before{
+    content: "";
+    position: absolute;
+    left: 4px;
+    width: 3px;
+    height: 100%;
+    background-color: blue;
+}
+
+
+.h-img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+
+}
+
+/*contents------------------------------------------------------------------------------------------------------------------------------------------*/
+.contents{
+    padding: 24px;
+}
+
+/*main---------------------------------------------------------------------------------------------------------------------------------------------*/
+.main{
+    float: left;
+    width: 70%;
+}
+
+.m-section{
+    color: #666666;
+    margin-bottom: 24px;
+}
+
+.m-h2{
+    background-color:#0f3bda;
+    color: #ffffff;
+    padding: 14px 12px 14px 24px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-bottom: 24px;
+
+}
+
+.m-h2::first-letter{/*1番最初の頭文字にスタイルを指定するさいの擬似要素*/
+    border-left: 3px solid #928CED;
+    padding-left: 16px;
+}
+
+.m-info{
+    padding-left: 20px;
+}
+
+.m-info-date{
+    float: left;
+    color: blue;
+    padding: 8px 32px 8px 0;
+}
+
+.m-info-description{
+    padding: 8px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.m-info-new{
+    background-color: red;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.m-log{
+    text-align: right;
+    padding-top: 24px;
+}
+
+.m-log a{
+    color: #666666;
+}
+
+.m-h3{
+    background-color: #f6f6f6;
+    padding: 14px 12px 14px 24px;
+    border-radius: 4px;
+    font-size: 17px;
+    margin-bottom: 24px;
+    border:1px solid #cccccc;
+}
+
+.m-p{
+    font-size: 15px;
+    color: #666666;
+    margin: 24px 26px;
+    line-height: 2;
+}
+
+.m-red{
+    color: red;
+    line-height: 2;
+    margin-bottom: 5px;
+}
+/*side------------------------------------------------------------------------------------------------------------------------------------------------*/
+.side{
+    float: right;
+    width: 25%;
+}
+
+.s-framebox{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background-color: #f4f4f4;
+    margin-bottom: 24px;
+    color: #666666;
+}
+
+.s-h4{
+    padding: 28px 10px;
+    border-top: 5px solid blue;
+    background: #eeeeee;
+    color: #666666;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.s-li{
+    border-bottom: 1px solid #d2d2d2;
+    padding: 15px;
+    color: #666666;
+    overflow: hidden;/*子要素のfloatの高さも認識して囲める*/
+}
+
+.s-li a{
+    color: #666666;
+    text-decoration: none;
+}
+
+.s-li:hover{
+    background: white;
+}
+
+.s-li:hover a{
+    color: blue;
+
+}
+
+.s-box{
+    margin-bottom: 24px;
+    color: #666666;
+}
+
+.s-img{
+    width: 20%;
+    float: left;
+    margin-right: 5px;
+}
+
+.s-info{
+    color: blue;
+    font-size: 11px;
+}
+
+.s-description{
+    font-size: 11px;
+}
+
+.s-company-title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.s-company-info{
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/*footer*/
+.footer{
+    clear: both;/*floatを指定した要素の下に潜り込むため、floatに巻き込まれないようにする*/
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 13px;
+    padding: 16px 0;
+    line-height: 2;
+}
+
+.footer-under{
+    font-size: 12px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover{
+    color:blue;
+}
+
+/*company.html*/
+.m-table{
+    width: 100%;
+}
+
+.m-th{
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;/*縦方向の位置を真ん中に指示*/
+}
+
+.m-td{
+    text-align: left;
+}
+
+.m-td a{
+    color: #666666;
+}
+
+.m-table .m-th,.m-td{
+    border: 1px solid #d2d2d2;
+    padding: 15px;
+}
+
+.m-glay{
+    background-color: #cccccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/*service.html*/
+.card{
+    overflow: hidden;/*.card imgの高さを認識させるために指示*/
+    padding: 20px;
+    border: 1px solid #cccccc;
+    line-height: 2;
+    position: relative;/*擬似要素の位置を指示するために指示*/
+    box-shadow: 0px 5px 10px #cccccc;
+    background: linear-gradient(#fff,#eee);
+    margin-bottom: 20px;
+}
+
+.card-no-link{
+    padding: 20px;
+    border: 1px solid #cccccc;
+    line-height: 2;
+    box-shadow: 0px 5px 10px #cccccc;
+    background: linear-gradient(#fff,#eee);
+    margin-bottom: 20px;
+}
+
+.card:hover{
+    box-shadow: 0px 10px 20px #ccc;
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
+.card img{
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+}
+
+.card h4{
+    color: blue;
+}
+
+.card::before{/*→の擬似要素*/
+    content: "→";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #666666;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+/*service-link.html*/
+.card-link img{
+    max-width: 100%;
+}
+
+/*recrit.html*/
+.m-th-top{
+    border: 1px solid #d2d2d2;
+    padding: 15px;
+    text-align: left;
+}
+
+/*contact.html*/
+input{
+    width: 60%;
+}
+
+textarea{
+    width: 90%;
+}
+
+.button{
+    width: 20%;
+    margin-top: 24px;
+}
+
+form{
+    text-align: center;
+}

@@ -1,0 +1,164 @@
+/*リセットCSS*/
+h1,h2,h3,ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: normal;
+    color: #656565;
+}
+
+a{
+    color: #656565;
+    transition: 0.3s;
+}
+
+img{
+    max-width: 100% ;/*画像幅を100%に指定*/
+}
+
+.container{
+    width: 1360px;
+    margin: 0 auto;/*要素を中央に揃える*/
+    padding: 0 20px;
+}
+
+header{
+    text-align: center;
+}
+
+.logo{
+    width: 400px;
+    margin: 30px auto;
+}
+
+.header-img{
+    border-radius: 10px;/*画像の角に半径10pxの丸みをつける*/
+    margin-bottom: 30px;
+}
+
+/*ナビ*/
+
+nav{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav ul li {
+    color: #666;
+    font-size: 18px;
+    display: inline-block;/**リストを横並びにする/
+    list-style: none;/*リストの黒丸を非表示*/
+}
+
+nav li a{
+    text-decoration: none;/*リストの下線を非表示*/
+    padding: 15px 30px;
+}
+
+nav li :hover{
+    color: #D08047;
+    border-bottom: 5px solid #D08047;
+}
+
+h2{
+    background-color: #D08047;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+section ul li{
+    line-height: 2;/*行の間隔を指示*/
+}
+
+.date{
+    margin:0 30px 0 20px;
+}
+
+h3{
+    font-size: 16px;
+    border-radius: 10px;
+    border:1px solid #656565 ;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+}
+
+p{
+    padding: 0 20px;
+    line-height: 2;
+}
+
+.p{
+    color: #D08047;
+}
+
+/*footer*/
+footer{
+    text-align: center;
+    font-size: 13px;
+    padding-top: 30px;
+    color: ;
+}
+
+.footer-under{
+    font-size: 12px;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #D08047;
+}
+
+/*表*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    border: solid 1px black;
+    padding: 15px 30px;
+}
+
+table th{
+    width: 30%;
+}
+
+.table-heading{
+    text-align: left;
+    background-color: #eeeeee;
+}
+
+.glay{
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.column{
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    padding: 20px;
+    
+}
+
+.column img{
+    width: 250px;
+    float:left;
+    margin-right: 50px;
+}
