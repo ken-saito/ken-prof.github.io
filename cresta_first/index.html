@@ -16,25 +16,28 @@
   <!--header-->
   <header>
     <h1 class="h-title"><a href="#">クリ★スタ</a></h1>
-    <!--レスポンシブ用のハンバーガーメニュー-->
-    <input type="checkbox" id="nav-input" class="nav-invisible">
-    <!--チェックが入ったときにスマホのメニューが表示され、チェックが外れるとメニューが非表示になる-->
-    <label id="nav-open" for="nav-input">
-      <!--nav-inputのためのlabel-->
-      <span class="bar bar_top"></span>
-      <span class="bar bar_mid"></span>
-      <span class="bar bar_buttom"></span>
-    </label>
-    <!--レスポンシブのメニューリスト-->
-    <div id="nav-contents">
-      <nav class="sp-nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#service">Service</a></li>
-          <li class="nav-item"><a href="#contact">Contact</a></li>
+    <!--ハンバーガーメニュー-->
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn">
+        <span></span>
+      </label>
+      <!--ここからメニュー-->
+      <div class="menu-content">
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#service">Service</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
-      </nav>
+      </div>
     </div>
+    <!--ここまでメニュー-->
     <div class="nav-wrapper">
       <nav>
         <ul>

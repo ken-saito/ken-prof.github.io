@@ -229,84 +229,132 @@ small{
 }
 
 
-/*------------------------------------------*/
-/*ハンバーガーメニュー設定
-/*------------------------------------------*/
+/*=======================================================
+====================ハンバーガーメニュー====================
+=======================================================*/
 
-  #nav-contents{
-    display: none;/*スマホ用のナビリストを非表示にする*/
-    position: absolute;
-    top: 66px;
-    z-index: 100;
-    width: 100%;
-    height: auto;
-    background-color: black;
-    opacity: 0;
-  }
 
-  #nav-open:hover{
-    cursor: pointer;
-  }
 
-  .nav-invisible{/*チェックボックスを非表示にする*/
-    display: none;
-  }
-
-  #nav-input:checked ~ #nav-contents{/*間接セレクタ*/
-    display: block;/*チェックが入ったときにメニューを表示する*/
-    opacity: 1;
-  }
-
-  .sp-nav{
-    display: none;
-  }
+.hamburger-menu{
+  display: none;/*PC画面でハンバーガーメニューを非表示*/
+}
 
 /*レスポンシブcss*/
 
 @media screen and (max-width:768px){
 
-  /*レスポンシブ*/
-  #nav-open{/*ハンバーガーメニューを表示する位置*/
-    position: absolute;
-    top: 25px;
-    right: 15px;
-  }
-
-  .bar{/*ハンバーガーメニュー(縦線)*/
-    display: block;
-    height: 3px;
-    width: 30px;
-    background-color: #fff;
-  }
-
-  .bar_top,.bar_mid{/*ハンバーガーメニュー(縦線)*/
-    margin-bottom: 8px;
-  }
-
-  .sp-nav{/*ハンバーガーメニュークリック時にメニューを表示*/
-    display: block;
-  }
-
   .nav-wrapper{
   display: none;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2
-  }
+}
 
-   .nav-list{
-    height: 100%;
-    flex-direction: column;
+  .hamburger-menu{/*スマホ画面でハンバーガーメニューを非表示*/
+  display: block;
+  border-color: #ffffff;
+}
+
+  .menu-btn {/*ハンバーガーメニューボタンの詳細*/
+    position: fixed;/*位置固定*/
+    top: 0px;
+    right: 5px;
+    display: flex;
+    height: 60px;
+    width: 60px;
     justify-content: center;
     align-items: center;
-  }
+    z-index: 90;
+    border-color: #ffffff;
+}
 
-  .nav-item{
-    margin: 20px 0;
-  }
+.menu-btn span,/*ハンバーガーメニューアイコンの真ん中の縦線*/
+.menu-btn span:before,/*ハンバーガーメニューアイコンの上の縦線*/
+.menu-btn span:after {/*ハンバーガーメニューアイコンの下の縦線*/
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:before {/*ハンバーガーメニューアイコンの上の縦線の位置*/
+    bottom: 8px;
+}
+
+.menu-btn span:after {/*ハンバーガーメニューアイコンの下の縦線の位置*/
+    top: 8px;
+}
+
+/*ハンバーガーへニューを開いている時のアイコンの表示*/
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {/*ハンバーガーメニューが開いている時*/
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {/*ハンバーガーメニューが開いている時*/
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;/*チェックボックスを非表示*/
+}
+
+/*ハンバーガーメニューの詳細*/
+
+.menu-content {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*left: 100%;leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #1D2428;
+    transition: all s;/*アニメーション設定*/
+    display: none;/*通常は非表示*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    display: block;/*アイコンがクリックされたときにハンバーガーメニューを表示*/
+    /*left:0;leftの値を変更してメニューを画面内へ*/
+}
+
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+  text-align: center;
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {/*メニューリストの矢印▷*/
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
 
   /*base*/
 
