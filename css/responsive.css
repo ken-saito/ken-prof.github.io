@@ -1,76 +1,129 @@
 /*=======================================================
 ====================ハンバーガーメニュー====================
 =======================================================*/
-#nav-open span i{
-  float: right;
-  cursor: pointer;
-  border: 1px solid #666666;
-  padding: 10px;
+
+.hamburger-menu{
+  display: none;/*PC画面でハンバーガーメニューを非表示*/
 }
 
-/*文字を非表示*/
-#nav-contents{
-  display: none;
-}
-
-/*チェックボックスを非表示*/
-.nav-invisible{
-  display: none;
-}
-
-/*レスポンシブ時のスマホ用ヘッダー*/
-#nav-contents{
-  position: absolute;
-  top: 100px;
-  z-index: 100;
-  width: 100%;
-  height: auto;
-  background: black;
-  transition: .3s;
-  opacity: 0;
-}
-
-/*ハンバーガーメニューがクリックされた時にメニューを表示する(間接セレクタ)*/
-#nav-input:checked ~ #nav-contents{
-  opacity: 0.8;
-  display: block;/*レスポンシブ時にメニューを表示*/
-}
-
-
-.sp-nav ul{
-  padding: 0;
-  margin: 0;
-}
-
-.sp-menu-list{
-  border-bottom: 1px solid white;
-  text-align: left;
-  line-height: 2.0;
-  padding: 16px;
-}
-
-.sp-menu-list a{
-  color: white;
-  text-decoration: none;
-}
-
-/*pc表示ではハンバーガーメニューを非表示にする*/
-.sp-menu{
-    display: none;
-}
 /*=======================================================
 ====================スマホ画面CSS=========================
 =======================================================*/
-@media screen and (max-width:700px){
-/*==================
-      全体設定
-==================*/
+@media screen and (max-width:768px){
 
-/*スマホ表示でハンバーガーメニューを表示する*/
-  .sp-menu{
+  .hamburger-menu{/*スマホ画面でハンバーガーメニューを非表示*/
+  display: block;
+  border-color: #ffffff;
+}
+
+  .menu-btn {/*ハンバーガーメニューボタンの詳細*/
+    position: fixed;/*位置固定*/
+    top: 0px;
+    right: 5px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    border-color: #ffffff;
+}
+
+.menu-btn span,/*ハンバーガーメニューアイコンの真ん中の縦線*/
+.menu-btn span:before,/*ハンバーガーメニューアイコンの上の縦線*/
+.menu-btn span:after {/*ハンバーガーメニューアイコンの下の縦線*/
+    content: '';
     display: block;
-    margin: 2rem;
-  }
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:before {/*ハンバーガーメニューアイコンの上の縦線の位置*/
+    bottom: 8px;
+}
+
+.menu-btn span:after {/*ハンバーガーメニューアイコンの下の縦線の位置*/
+    top: 8px;
+}
+
+/*ハンバーガーへニューを開いている時のアイコンの表示*/
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {/*ハンバーガーメニューが開いている時*/
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {/*ハンバーガーメニューが開いている時*/
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;/*チェックボックスを非表示*/
+}
+
+/*ハンバーガーメニューの詳細*/
+
+.menu-content {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*left: 100%;leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #1D2428;
+    transition: all s;/*アニメーション設定*/
+    display: none;/*通常は非表示*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    display: block;/*アイコンがクリックされたときにハンバーガーメニューを表示*/
+    /*left:0;leftの値を変更してメニューを画面内へ*/
+}
+
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+  text-align: center;
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {/*メニューリストの矢印▷*/
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+
+/*================================
+      全体設定
+==================================*/
 
 /*スマホ表示でヘッダーメニューを非表示にする*/
   .header-nav{
@@ -87,11 +140,16 @@
 /*==============================
               header
 ==============================*/
-  #h-title{
-    font-size: 18px;
+  .header{
+    height: auto;
+  }
+
+  .h-title{
+    font-size: 1rem;
+    margin: 1rem;
   }
   .main-title{
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 10px;
     margin-top: 50px;
   }

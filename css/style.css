@@ -5,6 +5,10 @@ body{
     font-family: "Noto Serif JP", serif;
 }
 
+html{
+    font-size: 16px;
+}
+
 li{
     list-style: none;
 }
@@ -113,14 +117,15 @@ section{
     position: fixed;
     top: 0;
     z-index: 10;
-    opacity: 0.9;
+    opacity: 0.8;
     display: flex;
+    justify-content: space-between;
 }
 
-.header h1{
+.h-title{
     padding-left:50px;
     letter-spacing: 5px;
-    font-size: 35px;
+    font-size: 2rem;
 }
 
 .header-nav{
@@ -164,7 +169,7 @@ section{
     left: 40%;
     transform: translate(-40%,-30%);
     color: white;
-    font-size: 60px;
+    font-size: 5rem;
     letter-spacing: 20px;/*文字と文字の間隔*/
     line-height: 1.5;/*行と行の間隔*/
     font-weight: bold;/*文字の太さ*/
@@ -242,6 +247,7 @@ section{
 
 .service-box ul{
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -258,12 +264,14 @@ section{
 
 .works-box ul{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .works-box ul li{
     box-sizing: border-box;
-    width: calc(100%/3);
-    margin-right: 5%;
+    flex-basis: 30%;
+    margin-bottom: 5%;
     background-color: #fff;
 }
 

@@ -1,0 +1,511 @@
+/*------------------------------------------*/
+/*base
+/*------------------------------------------*/
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  color: #171717;
+  font-family:'Noto Serif','Noto Serif JP', serif;
+}
+
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+
+li{
+  list-style: none;
+}
+
+.section-wrapper{
+  padding: 100px 0 70px;
+}
+
+.section-title{
+  max-width: 1000px;
+  color: #282F35;
+  font-size: 6rem;
+  font-style: italic;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.section-title::after{
+  content: "";
+  display: inline-block;
+  background-color: #282F35;
+  width: 200px;
+  height: 5px;
+  margin-left: 30px;
+  vertical-align: middle;/*線の位置を真ん中に*/
+}
+
+.section-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-bottom{
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 9rem;
+  opacity: .05;
+}
+
+.link-btn{
+  display: block;
+  width: 235px;
+  line-height: 60px;
+  margin: 0 auto 70px;
+  background-color: #F7D43F;
+  box-shadow: 0 0 6px #1B1310;
+  border-radius: 30px;
+  text-align: center;
+  color: #171717;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.link-btn:hover{
+  opacity: .7;
+  transition: .3s;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.text-white::after{
+  background-color: #fff;
+}
+
+.sp-br{
+  display: none;/*<br>を無効にする*/
+}
+
+/*------------------------------------------*/
+/*header
+/*------------------------------------------*/
+
+.header{
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header a{
+  color: #fff;
+  text-decoration: none;
+  transition: .3S;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header a:hover{
+  opacity: .7;
+  transition: .3s;
+}
+
+.site-title{
+  font-size: 2.6rem;
+}
+
+.nav-list{
+  display: flex;
+}
+
+.nav-item{
+  margin-right: 30px;
+}
+
+.nav-item:last-of-type{
+  margin-right: 0;
+}
+
+/*------------------------------------------*/
+/*first view
+/*------------------------------------------*/
+.fv{
+  height: 100vh;
+  min-height: 550px;
+  position: relative;
+  background-image: url(../img/fv-bgi_01@2x.jpg);
+  background-position: 0 0;
+  background-size: cover;
+}
+.main-copy{
+  position: absolute;
+  left: 120px;
+  bottom: 177px;
+  color: #fff;
+  font-weight: bold
+}
+
+.en-copy{
+  font-size: 7rem;
+  margin-bottom: 31px;
+}
+
+.ja-copy{
+  font-size: 4rem;
+  text-align: center;
+}
+
+/*------------------------------------------*/
+/*concept
+/*------------------------------------------*/
+
+.concept-lead{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.concept-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.concept-text{
+  max-width: 440px;
+  line-height: 1.9;
+  font-weight: bold;
+}
+
+.concept-img-wrapper{
+  max-width: 440px;
+  margin-left: 20px;
+}
+
+/*------------------------------------------*/
+/*works
+/*------------------------------------------*/
+
+.bg-works{
+  background-image: url(../img/works-bgi@2x.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.works-list{
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.works-item{
+  width: 32%;
+  background-color: #fff;
+}
+
+.works-item a{
+  color: #141414;
+  text-decoration: none;
+}
+
+.works-list-text{
+  padding: 20px 25px;
+}
+
+/*------------------------------------------*/
+/*service
+/*------------------------------------------*/
+
+.service-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-item{
+  width: 33.3%;
+}
+
+.service-item a{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 320px;
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+  transition: .3s;
+}
+
+.service1{
+  background-image: url(../img/service-img01@2x.jpg);
+}
+.service2{
+  background-image: url(../img/service-img02@2x.jpg);
+}
+.service3{
+  background-image: url(../img/sevice-img03@2x.jpg);
+}
+
+.service-item a:hover{
+  background-color: rgba(40, 47, 53, .7);
+  transition: .3s;
+}
+
+/*------------------------------------------*/
+/*service
+/*------------------------------------------*/
+
+.bg-contact{
+  background-image: url(../img/contact-bgi@2x.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-text{
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+
+/*------------------------------------------*/
+/*footer
+/*------------------------------------------*/
+
+footer{
+  padding: 30px 0;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/*------------------------------------------*/
+/*ハンバーガーメニュー設定
+/*------------------------------------------*/
+
+  #nav-contents{
+    display: none;/*スマホ用のナビリストを非表示にする*/
+    position: absolute;
+    top: 66px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    opacity: 0;
+  }
+
+  .nav-invisible{/*チェックボックスを非表示にする*/
+    display: none;
+  }
+
+  #nav-input:checked ~ #nav-contents{/*間接セレクタ*/
+    display: block;/*チェックが入ったときにメニューを表示する*/
+    opacity: 1;
+  }
+
+  .sp-nav{
+    display: none;
+  }
+
+
+
+/*------------------------------------------*/
+/*レスポンシブ
+/*------------------------------------------*/
+
+@media screen and (max-width:768px){
+
+
+/*------------------------------------------*/
+/*base_sp
+/*------------------------------------------*/
+  #nav-open{/*ハンバーガーメニューを表示する位置*/
+    position: absolute;
+    top: 35px;
+    right: 15px;
+  }
+
+  .sp-nav{
+    display: block;
+  }
+
+  .section-wrapper{
+    padding: 100px 0 40px;
+  }
+
+  .section-title{
+    font-size: 3rem;
+    padding: 0 4vw;
+    margin-bottom: 55px;
+  }
+
+  .section-title::after{
+    width: 90px;
+  }
+
+  .section-inner{
+    padding: 0 4vw;
+  }
+
+  .section-bottom{
+    font-size: 4rem;
+    padding: 0 4vw;
+  }
+
+  .link-btn{
+    margin-bottom: 40px;
+  }
+
+  .sp-br{
+  display: block;/*<br>を有効にする*/
+  }
+
+  .pc-br{
+    display: none;
+  }
+
+/*------------------------------------------*/
+/*header_sp
+/*------------------------------------------*/
+
+  .header{
+    padding: 30px 4vw 0;
+  }
+
+  .header-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #282f35;
+  }
+
+  .nav-list{
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item{
+    margin: 20px 0;
+  }
+
+  .bar{
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+  }
+
+  .bar_top,.bar_mid{
+    margin-bottom: 8px;
+  }
+
+/*------------------------------------------*/
+/*fv_sp
+/*------------------------------------------*/
+
+  .main-copy{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  }
+
+  .en-copy{
+    font-size: 9.8vw;
+    white-space: nowrap;/*<br>を無効にする*/
+  }
+
+  .ja-copy{
+    font-size: 8vw;
+  }
+
+/*------------------------------------------*/
+/*concept_sp
+/*------------------------------------------*/
+
+  .concept-lead{
+    font-size: 2rem;
+    margin-bottom: 34px;
+  }
+
+  .concept-content{
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .concept-text{
+    margin-bottom: 30px;
+  }
+
+  .concept-img-wrapper{
+    margin: 0;
+  }
+
+/*------------------------------------------*/
+/*works_sp
+/*------------------------------------------*/
+
+  .works-list{
+    display: block;
+    padding: 0 4vw;
+    margin-bottom: 80px;
+  }
+
+  .works-item{
+    width: 320px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+/*------------------------------------------*/
+/*service_sp
+/*------------------------------------------*/
+
+  .service-list{
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .service-item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .service-item a{
+    line-height: 250px;
+  }
+}
