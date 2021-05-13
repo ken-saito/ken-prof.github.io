@@ -146,10 +146,11 @@
 
   .h-title{
     font-size: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
   }
   .main-title{
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     letter-spacing: 10px;
     margin-top: 50px;
   }
