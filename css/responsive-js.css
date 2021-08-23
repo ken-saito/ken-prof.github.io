@@ -1,0 +1,76 @@
+/*
+ハンバーガーメニュー(JavaScript)
+=======================================================*/
+
+.btn-menu{
+  display: none;/*PC画面表示のときは非表示にする*/
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: .5rem 1rem;
+}
+
+.main-nav{
+  background: gray;
+  width: 0;/*100%から0に変更(非表示にする)*/
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 0;
+  overflow: hidden;
+  transition: .5s;/*スライドのアニメーション*/
+}
+
+.main-nav li{
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.main-nav a{
+  display: block;
+}
+
+.main-nav.open-menu{
+  width: 100%;/*mian-navクラスのある要素かつopen-menuクラスが付与された場合に幅を100%に変化させる*/
+}
+
+@media screen and (max-width:768px){
+
+  .container{
+    width: auto;
+  }
+
+  .header{
+    height: 80px;
+  }
+
+  .btn-menu{
+    display: block;
+  }
+
+  .h-title{
+    font-size: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-nav{
+    display: none;
+  }
+
+  .top-title{
+    font-size: 2rem;
+  }
+
+  .about-wrapper{
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-wrapper{
+    padding: 0;
+    margin: 0;
+  }
+}
