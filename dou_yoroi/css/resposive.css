@@ -1,0 +1,136 @@
+/*================================================================================
+=====  レスポンシブ
+================================================================================*/
+@media screen and (max-width: 768px) {/*768px以下の画面での表示を設定*/
+  html{
+    font-size: 16px;
+  }
+
+/*================================================================================
+=====  ハンバーガーメニューに関して
+================================================================================*/
+
+  header label,
+  header input{/*ハンバーガメニューを表示させる*/
+    display: block;
+  }
+
+  header input{
+    display: none;
+  }
+
+  header label{
+    position: absolute;
+    right: 10px;
+    clear: both;
+  }
+
+  .hamburger_icon{
+    display: inline-block;
+    width: 35px;
+    height: 25px;
+  }
+
+/*================================================================================
+=====  ハンバーガーメニューの表示
+================================================================================*/
+
+  .hamburger_icon i{/*ハンバーガメニューの線のスタイルを表示*/
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all .3s ease-in-out;
+  }
+
+  .hamburger_icon i:nth-child(1) {/*ハンバーガメニューの1本目の線の配置*/
+    top: 0;
+  }
+
+  .hamburger_icon i:nth-child(2) {/*ハンバーガメニューの2本目の線の配置*/
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+
+  .hamburger_icon i:nth-child(3) {/*ハンバーガメニューの3本目の線の配置*/
+    bottom: 0;
+  }
+
+/*================================================================================
+=====  ハンバーガーメニューがクリックされた時のアイコンの動作
+================================================================================*/
+
+  header input:checked + label .hamburger_icon i:nth-child(1) {
+    margin: auto;
+    transform: rotate(45deg);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+
+  header input:checked + label .hamburger_icon i:nth-child(2) {
+    transform: rotateX(90deg);
+    top: 0;
+    bottom: 0;
+  }
+
+  header input:checked + label .hamburger_icon i:nth-child(3) {
+    margin: auto;
+    transform: rotate(-45deg);
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+/*================================================================================
+=====  ハンバーガーメニューがクリックされた時の処置
+================================================================================*/
+
+　header input:checked ~ .header-nav{
+    z-index: 99;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+　.header-nav {
+    position: fixed;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 50px;
+    right: 0;
+    transform: translateX(100%);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s ease-out;
+  }
+
+/*================================================================================
+=====  header
+================================================================================*/
+
+
+  .header-wrapper{
+    padding: 10px;
+  }
+
+  .header-logo{
+  font-size: 1.2rem;
+  display: block;
+  }
+
+  .header-nav{
+    display: none;
+  }
+
+  label {
+  display: block;
+  }
+
+
+
+
+}
