@@ -17,7 +17,7 @@
   width: 0;/*100%から0に変更(非表示にする)*/
   position: absolute;
   z-index: 2;
-  top: 50px;
+  top: 90px;
   right: 0;
   overflow: hidden;
   transition: .5s;/*スライドのアニメーション*/
@@ -139,6 +139,20 @@
 
 .faq-question{
   padding:24px 50px 24px 24px;
+}
+
+.faq-question::after{
+  right: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.modal-checkbox:checked ~ [data-modal="trigger"] {/*【モーダルを閉じる】の表示位置を指定*/
+  bottom: 72px;
+}
+
+.modal-content{
+  overflow-y: auto;
 }
 
 }
