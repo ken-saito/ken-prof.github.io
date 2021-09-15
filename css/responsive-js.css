@@ -2,25 +2,31 @@
 ハンバーガーメニュー(JavaScript)
 =======================================================*/
 
+/*ハンバーガメニューのアイコン表示*/
 .btn-menu{
   display: none;/*PC画面表示のときは非表示にする*/
-  position: absolute;
-  top: 12px;
-  right: 12px;
+  position: absolute;/*表示位置の指定①*/
+  top: 10px;/*表示位置の指定②*/
+  right: 12px;/*表示位置の指定③*/
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: white;
   padding: .5rem 1rem;
 }
 
+/*ハンバーガーメニューの表示*/
 .main-nav{
-  background: gray;
+  background: gray;/*背景*/
   width: 0;/*100%から0に変更(非表示にする)*/
-  position: absolute;
+  position: absolute;/*表示位置の指定①*/
+  top: 60px;/*表示位置の指定②*/
+  right: 0;/*表示位置の指定③*/
   z-index: 2;
-  top: 50px;
-  right: 0;
   overflow: hidden;
   transition: .5s;/*スライドのアニメーション*/
+}
+
+.main-nav.open-menu{
+  width: 100%;/*mian-navクラスのある要素かつopen-menuクラスが付与された場合に幅を100%に変化させる*/
 }
 
 .main-nav li{
@@ -32,45 +38,115 @@
   display: block;
 }
 
-.main-nav.open-menu{
-  width: 100%;/*mian-navクラスのある要素かつopen-menuクラスが付与された場合に幅を100%に変化させる*/
-}
 
 @media screen and (max-width:768px){
 
-  .container{
-    width: auto;
+  #About,
+  #Works,
+  #Service{
+    padding: 0;
+    margin: 0;
   }
+
+  .container{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+/*=======================================================
+   header
+=======================================================*/
 
   .header{
-    height: 80px;
-  }
-
-  .btn-menu{
-    display: block;
+    height: 60px;
+    align-items: center;/*子要素の高さ位置を中心に*/
   }
 
   .h-title{
-    font-size: 0.5rem;
-    padding: 0;
-    margin: 0;
+    font-size: 1.5rem;
   }
 
-  .header-nav{
+  .btn-menu{/*ハンバーガメニューのボタンを表示する*/
+    display: block;
+  }
+
+  .header-nav{/*PC画面時のヘッダーメニューを非表示にする*/
     display: none;
   }
 
+/*=======================================================
+   top
+=======================================================*/
+
+  .top-wrapper{
+    height: 60vh;
+    align-items: center;
+  }
+
   .top-title{
-    font-size: 2rem;
+    color: #E6551E;
+    font-family: "Noto Serif JP";
+    font-size: 1.2rem;
+    letter-spacing: 10px;/*文字と文字の間隔*/
+    line-height: 1.5;/*行と行の間隔*/
+    font-weight: bold;/*文字の太さ*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*=======================================================
+   about
+=======================================================*/
+
+  .about-box{
+    display: block;/*display:block;を解除*/
   }
 
-  .about-wrapper{
-    padding: 0;
+  .face-box{
+    width: 100%;
     margin: 0;
   }
 
-  .service-wrapper{
-    padding: 0;
-    margin: 0;
+  .face-img{
+    padding: 0 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-wrapper{/*斜線の区切りを無効にする*/
+    clip-path: none;
+  }
+
+/*=======================================================
+   service
+=======================================================*/
+  .service-box ul{
+    display: block;/*display:block;を解除*/
+  }
+
+  .service-wrapper{/*斜線の区切りを無効にする*/
+    clip-path: none;
+  }
+
+  /*=======================================================
+   work
+=======================================================*/
+
+  .works-box ul{
+    display: block;
+  }
+
+  .works-wrapper{
+    clip-path: none;/*斜線の区切りを無効にする*/
+  }
+
+  .works-box ul{
+    padding-bottom: 15px;
+  }
+
+  .works-box ul li{
+    margin:15px 15px;
   }
 }

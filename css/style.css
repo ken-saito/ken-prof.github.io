@@ -43,7 +43,6 @@ a{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color:transparent;
-    text-fill-color:transparent;
 }
 
 /* ========================================
@@ -74,8 +73,8 @@ header
 
 .h-title{
     font-family: 'Amatic SC', cursive;
-    padding-left:50px;
-    letter-spacing: 5px;
+    padding-left:20px;
+    letter-spacing: 2px;
     font-size: 3rem;
 }
 
@@ -106,24 +105,19 @@ Top
 ========================================= */
 
 .top-wrapper{
-    margin-top: 80px;/*headerがposition:fixed;のためheader分の100pxを設定*/
     background-image: url(../images/main.jpg);/*背景画像を設定*/
-    height: 100vh;/*表示領域の高さいっぱいに背景画像を広げる*/
+    height: 900px;/*表示領域の高さいっぱいに背景画像を広げる場合は100vh*/
     background-size: cover;/*画像の縦横比を保持*/
     background-repeat: no-repeat;
     background-position: center center;
-    animation-name: top-wrapper-animation;/*アニメーションをつけるためのネーム*/
-    animation-duration: 8s;/*アニメーションを実行する時間*/
-    animation-iteration-count: infinite;/*アニメーションを繰り返す回数*/
-    /*background-color: #4db1ec;*/
-    /* background-blend-mode: hard-light;背景画像と背景色を重ねる */
+    position: relative;
 }
 
 .top-title{
     position: absolute;
     top: 50%;
-    left: 40%;
-    transform: translate(-40%,-30%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     color: #E6551E;
     font-family: "Noto Serif JP";
     font-size: 5rem;
@@ -131,7 +125,6 @@ Top
     line-height: 1.5;/*行と行の間隔*/
     font-weight: bold;/*文字の太さ*/
     -webkit-text-stroke: 3px #F5BC2D;
-    text-stroke: 3px #F5BC2D;
 }
 
 /* ========================================
@@ -271,6 +264,8 @@ Works
 
 .contact-p{
     text-align: center;
+    padding: 20px 0;
+    font-size: 1.2rem;
 }
 
 /* ========================================
@@ -283,37 +278,8 @@ Footer
     height: 100px;
 }
 
-/*
-CSSアニメーション
-========================================= */
-
-/*.top-wrapperのアニメーション*/
-@keyframes top-wrapper-animation{
-    0%{
-        background-color: #4db1ec;
-    }
-    12.5%{
-        background-color: #1665cc;
-    }
-    25%{
-        background-color: #b473bf;
-    }
-    37.5%{
-        background-color: #ffb2c1;
-    }
-    50%{
-        background-color: #ff9f67;
-    }
-    62.5%{
-        background-color: #ffd673;
-    }
-    75%{
-        background-color: #a2e29b;
-    }
-    87.5%{
-        background-color: #00a2af;
-    }
-    100%{
-        background-color: #4db1ec;
-    }
+.footer p{
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
 }
